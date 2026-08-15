@@ -1,6 +1,0 @@
-EmployeeID,Age,Gender,Department,JobRole,Education,MonthlyIncome,TotalWorkingYears,YearsInCurrentRole,YearsAtCompany,JobSatisfaction,WorkLifeBalance,Overtime,DistanceFromHome,Attrition
-1,40,Male,Research & Development,Laboratory Technician,Bachelor's,2920,2,0,2,3,1,Yes,2,No
-2,27,Female,Sales,Sales Representative,High School,2968,2,1,1,1,3,No,28,No
-3,30,Female,Sales,Manager,Bachelor's,5731,2,0,1,3,4,Yes,14,No
-4,31,Female,Research & Development,Research Scientist,Master's,3460,2,1,2,3,4,Yes,8,No
-5,24,Female,Sales,Sales Executive,Bachelor's,3465,1,0,0,3,1,Yes,21,No
