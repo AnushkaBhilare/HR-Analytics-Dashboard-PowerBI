@@ -1,0 +1,22 @@
+HR Analytics Dashboard - DAX Measures
+
+Total Employees = COUNTROWS(HR_Employee_Data)
+
+Attrition Count = CALCULATE(COUNTROWS(HR_Employee_Data), HR_Employee_Data[Attrition] = "Yes")
+
+Active Employees = CALCULATE(COUNTROWS(HR_Employee_Data), HR_Employee_Data[Attrition] = "No")
+
+Attrition Rate = DIVIDE([Attrition Count], [Total Employees], 0)
+
+Average Salary = AVERAGE(HR_Employee_Data[MonthlyIncome])
+
+Average Age = AVERAGE(HR_Employee_Data[Age])
+
+Average Tenure = AVERAGE(HR_Employee_Data[YearsAtCompany])
+
+Average Job Satisfaction = AVERAGE(HR_Employee_Data[JobSatisfaction])
+
+Notes:
+- Format Attrition Rate as Percentage.
+- Format Average Salary as Currency or Whole Number.
+- Use Department, JobRole, Gender, Education, Overtime and Attrition as slicer/filter fields.
