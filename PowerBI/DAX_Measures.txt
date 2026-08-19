@@ -20,3 +20,21 @@ Notes:
 - Format Attrition Rate as Percentage.
 - Format Average Salary as Currency or Whole Number.
 - Use Department, JobRole, Gender, Education, Overtime and Attrition as slicer/filter fields.
+
+Salary Banding (Calculated Column)
+Salary Band = 
+SWITCH(
+    TRUE(),
+    HR_Employee_Data[MonthlyIncome] < 3000, "1. Low (< 3k)",
+    HR_Employee_Data[MonthlyIncome] <= 7000, "2. Mid (3k - 7k)",
+    HR_Employee_Data[MonthlyIncome] <= 12000, "3. High (7k - 12k)",
+    "4. Executive (> 12k)"
+)
+
+High Risk Attrition Count (Advanced DAX)
+High Risk Attrition Count = 
+CALCULATE(
+    [Total Employees],
+    HR_Employee_Data[Overtime] = "Yes",
+    HR_Employee_Data[JobSatisfaction] <= 2
+)
